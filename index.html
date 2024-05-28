@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Learning Recommendation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>What factors are most important to you when selecting a language learning method?</h2>
+        <form id="boxForm">
+            <div class="box-grid">
+                <label class="box">
+                    <input type="checkbox" name="boxes" value="Time"> Time
+                </label>
+                <label class="box">
+                    <input type="checkbox" name="boxes" value="Flexibility"> Flexibility
+                </label>
+                <label class="box">
+                    <input type="checkbox" name="boxes" value="Entertainment"> Entertainment
+                </label>
+                <label class="box">
+                    <input type="checkbox" name="boxes" value="Prestige"> Prestige
+                </label>
+                <label class="box">
+                    <input type="checkbox" name="boxes" value="Proficiency"> Proficiency
+                </label>
+                <label class="box">
+                    <input type="checkbox" name="boxes" value="Interaction"> Interaction
+                </label>
+            </div>
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
