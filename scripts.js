@@ -4,7 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const warningDiv = document.getElementById('warning');
 
     checkboxes.forEach((checkbox) => {
+
+        checkbox.addEventListener('click', () => {
+            checkbox.parentElement.classList.toggle('toggled-border');
+        })
+
         checkbox.addEventListener('change', () => {
+            const resultDiv = document.getElementById('result');
+            resultDiv.textContent = '';
             const selectedCount = document.querySelectorAll('input[name="boxes"]:checked').length;
 
             if (selectedCount > 3) {
@@ -22,6 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function submitForm() {
+    const resultDiv = document.getElementById('result');
+    resultDiv.textContent = '';
     const checkboxes = document.querySelectorAll('input[name="boxes"]:checked');
     const selectedBoxes = [];
     checkboxes.forEach((checkbox) => {
@@ -46,7 +55,6 @@ function submitForm() {
         recommendation = 'Classroom';
     }
 
-    const resultDiv = document.getElementById('result');
     if (selectedBoxes.length > 0) {
         resultDiv.textContent = 'You selected: ' + selectedBoxes.join(', ') + 
         '. We recommend you to use ' + recommendation + ' for your language learning journey! :)';
