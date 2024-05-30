@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Language Learning Recommendation</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
     <div class="container">
-        <h2>What factors are most important to you when selecting a language learning method?</h2>
+        <h2>What factors are most important to you when selecting a language learning method? Select only three.</h2>
         <form id="boxForm">
             <div class="box-grid">
                 <label class="box">
@@ -36,10 +34,10 @@
             <button type="button" onclick="submitForm()">Submit</button>
         </form>
         <div id="result" class="result"></div>
+        <div id="warning" style="color: red;"></div>
     </div>
 
     <script src="scripts.js"></script>
 
 </body>
-
 </html>
