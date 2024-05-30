@@ -4,10 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const warningDiv = document.getElementById('warning');
 
     checkboxes.forEach((checkbox) => {
-
         checkbox.addEventListener('click', () => {
             checkbox.parentElement.classList.toggle('toggled-border');
-        })
+        });
 
         checkbox.addEventListener('change', () => {
             const resultDiv = document.getElementById('result');
@@ -37,11 +36,11 @@ function submitForm() {
         selectedBoxes.push(checkbox.value);
     });
 
-    // Logic to check if Duolingo versus Classroom-Setting 
+    // Logic to check if Duolingo versus Classroom-Setting
     let duo = 0;
-    let classroom = 0; 
+    let classroom = 0;
     selectedBoxes.forEach((value) => {
-        if(value === 'Time' || value === 'Flexibility' || value === 'Entertainment') {
+        if (value === 'Time' || value === 'Flexibility' || value === 'Entertainment') {
             duo += 1;
         } else {
             classroom += 1;
@@ -49,15 +48,15 @@ function submitForm() {
     });
 
     let recommendation = '';
-    if(duo > classroom) {
+    if (duo > classroom) {
         recommendation = 'Duolingo';
     } else {
         recommendation = 'Classroom';
     }
 
     if (selectedBoxes.length > 0) {
-        resultDiv.textContent = 'You selected: ' + selectedBoxes.join(', ') + 
-        '. We recommend you to use ' + recommendation + ' for your language learning journey! :)';
+        resultDiv.textContent = 'You selected: ' + selectedBoxes.join(', ') +
+            '. We recommend you to use ' + recommendation + ' for your language learning journey!';
     } else {
         resultDiv.textContent = 'No boxes selected';
     }
