@@ -12,7 +12,7 @@ body {
 
 .title {
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1em;
     margin-bottom: 20px;
 }
 
@@ -80,7 +80,7 @@ button:hover {
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     .container {
-        width: 80%;
+        width: 60%;
     }
 
     .box {
